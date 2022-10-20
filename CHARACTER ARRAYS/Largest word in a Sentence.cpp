@@ -15,32 +15,31 @@ int main(){
     cin.ignore();
     
     int i=0;
-    int currentLength = 0;
-    int maxLength = 0;
+    int currLen = 0;
+    int maxLen = 0;
     int st=0;
     int maxst=0;
     
     while(true){
         if(arr[i] == ' ' || arr[i] == '\0'){
-            if(currentLength > maxLength){
-                maxLength = currentLength;
+            if(currLen > maxLen){
+                maxLen = currLen;
                 maxst = st;
             }
-            currentLength=0;
+            currLen=0;
             st=i+1;
         }
-        else{
-            currentLength++;
-        }
-        if(arr[i] == '\0'){
+        else
+            currLen++;
+        if(arr[i] == '\0')
             break;
-        }
+        
         i++;
         
     }
-    cout<< maxLength << endl;
-    for(int i=0; i<maxLength; i++){
+    cout<< maxLen << endl;
+    for(int i=0; i<maxLen; i++)
         cout<< arr[i+maxst];
-    }
+    
     return 0;
 }
