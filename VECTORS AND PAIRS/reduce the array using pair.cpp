@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool  myCompare(pair<int, int> p1, pair<int, int> p2){
+bool myCompare(pair<int, int> p1, pair<int, int> p2){
     // To check whether p1 or p2 will come first 
     // By using their first element
     return p1.first<p2.first;
