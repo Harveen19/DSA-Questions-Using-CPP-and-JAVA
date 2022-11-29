@@ -6,27 +6,26 @@ bool isSafe(int** arr, int x, int y, int n){
         if(arr[row][y]==1){
             return false;
         }
-    }
+			}
 
     int row=x, col=y;
     while(row>=0 && col>=0){ // for left diagonal
         if(arr[row][col]==1){
             return false;
-        }
+		}
         row--;
         col--;
-    }
+		}
 
      row=x, col=y;
     while(row>=0 && col<n){ // for right diagonal
         if(arr[row][col]==1){
             return false;
-        }
+		}
         row--;
         col++;
-    }
-
-    return true;
+	}
+	return true;
 
 }
 
@@ -34,22 +33,22 @@ bool isSafe(int** arr, int x, int y, int n){
 bool nQueen(int** arr, int x, int n){
     if(x>=n){ // base case
         return true;
-    }
+			}
 
     // To check if the place is safe to keep the queen
-    for (int col = 0; col < n; col++)
-    {
+    for (int col = 0; col < n; col++){
         /* code */
         if(isSafe(arr,x,col,n)){
             arr[x][col]=1;
 
             if(nQueen(arr,x+1,n)){
                 return true;
-            }
+	    	}
+	    	
             arr[x][col]=0; // this step is backtracking
-        }
+		}
     }
-
+    
     return false; // if we are not able to place our queen in any column
 }
 
