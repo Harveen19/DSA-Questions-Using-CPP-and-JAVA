@@ -59,3 +59,44 @@ int main(){
     c3.display();
     return 0;
 }
+
+// Run time Polymorphism
+// make one base class and derived class
+
+#include"bits/stdc++.h"
+using namespace std;
+
+// base class
+class base{
+    public:
+    virtual void print(){
+        cout << "this is base class"<<endl;
+    }
+    void display(){
+        cout << "this is base class display"<<endl;
+    }
+};
+
+// derived class
+class derived: public base{
+    public:
+    void print(){
+        cout << "this is derived class"<<endl;
+    }
+    void display(){
+        cout << "this is derived class display"<<endl;
+    }
+};
+
+int main(){
+    // base pointer
+    base *baseptr;
+    // object of derived class
+    derived d;
+    // in pointer of base we'll put address of derived class
+    baseptr= &d;
+
+    baseptr -> print();
+    baseptr -> display();
+    return 0;
+}
