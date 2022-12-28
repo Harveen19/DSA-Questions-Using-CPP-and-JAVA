@@ -111,3 +111,5 @@ int main(){
 
     return 0; 
 }
+
+// O(m+n) complexity m is length of list 1 and n is length of list 2
