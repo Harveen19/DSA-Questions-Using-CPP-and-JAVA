@@ -33,6 +33,17 @@ class stack{
         }
         top--;
     }
+
+    // top function
+    int Top(){
+        if(top== -1){
+            cout<<"No element in stack"<<endl;
+            return -1;
+        }
+        return arr[top];
+    }
+
+    
 };
 
 int main(){
