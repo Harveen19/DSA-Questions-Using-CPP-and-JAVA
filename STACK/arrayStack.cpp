@@ -51,5 +51,19 @@ class stack{
 };
 
 int main(){
+    stack st; // made a class named st
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    cout<<st.Top()<<endl;
 
+    st.pop();
+    cout<<st.Top()<<endl;
+
+    st.pop();
+    st.pop();
+    st.pop();
+    cout<<st.empty()<<endl;
+
+    return 0;
 }
