@@ -43,7 +43,11 @@ class stack{
         return arr[top];
     }
 
-    
+    // empty operation
+    bool empty(){
+       // we'll be checking if the value of top is -1.
+       return top==-1; 
+    }
 };
 
 int main(){
