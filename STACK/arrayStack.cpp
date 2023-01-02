@@ -23,6 +23,16 @@ class stack{
         top++;
         arr[top]=x;
     }
+
+    // pop operation
+    // In which we'll be removing topmost element
+    void pop(){
+        if(top== -1){
+            cout<<"No element to pop"<<endl;
+            return;
+        }
+        top--;
+    }
 };
 
 int main(){
