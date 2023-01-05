@@ -28,6 +28,7 @@
 //Input: n = 2
 //Output: false
 
+
 class Solution {
 public:
     int squareDigits(int n) {
