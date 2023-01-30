@@ -27,6 +27,9 @@ Output: 1389537
 class Solution {
 public:
     int tribonacci(int n) {
+        if(n==0)
+        return 0;
+        
         int t0=0;
         int t1=1;
         int t2=1;
