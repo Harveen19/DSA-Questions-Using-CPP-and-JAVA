@@ -27,3 +27,35 @@ public class Main {
 	    }
 	}
 }
+
+
+// Using Recursion With Optimised Approach
+public class Main {
+    public static boolean isSorted(int arr[], int idx){
+        if(idx == arr.length-1){ // base case
+            return true;
+        }
+        
+        if(arr[idx] <= arr[idx+1]){
+            // array is unsorted till now
+            return false;
+        }
+        
+        return isSorted(arr, idx+1);
+        
+    }
+    
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i] = sc.nextInt();
+		}
+		
+		System.out.println(isSorted(arr, 0));
+		
+	}
+}
+
