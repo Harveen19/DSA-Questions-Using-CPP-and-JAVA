@@ -32,6 +32,7 @@
 // 1 ≤ X ≤ 10^6
 
 
+
 class Solution {
     int count(int[] arr, int n, int x) {
         // code here
